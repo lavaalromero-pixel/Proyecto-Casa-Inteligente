@@ -15,17 +15,207 @@
 </head>
 
 <body>
+   <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+
+    <div class="container">
+
+      <a class="navbar-brand font-weight-bold"
+        href="index.html">
+
+        🏠 Casa Inteligente
+
+      </a>
+
+      <!-- BOTÓN -->
+      <button class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#menu">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <!-- MENÚ -->
+      <div class="collapse navbar-collapse"
+        id="menu">
+
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active"
+              href="index.html">
+
+              Inicio
+
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active"
+              href="about.html">
+
+              Acerca de
+
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active"
+              href="desing.html">
+
+              Diseño
+
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link"
+              href="gallery.html">
+
+              Galería
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
 
 <div class="container mt-5">
 
   <div class="card p-5 shadow">
 
     <h1>📖 Acerca del Proyecto</h1>
-    <title>Informacion sobre el Proyecto</title>
 
-    <p>
-      La casa inteligente busca brindar comodidad, seguridad y automatización utilizando sensores conectados a una ESP32.
-    </p>
+<h3>Definición del Proyecto</h3>
+
+<p>
+La casa domótica es un proyecto de automatización diseñado para controlar y monitorear diferentes funciones del hogar mediante sensores electrónicos y un microcontrolador ESP32.
+</p>
+
+<p>
+El sistema utiliza el sensor HC-SR04 para detectar distancias y movimientos, el sensor MQ-135 para detectar gases y controlar la calidad del aire, y el módulo HW-080 para apoyar funciones de detección y automatización dentro de la vivienda.
+</p>
+
+<p>
+La información obtenida por los sensores es procesada por el ESP32, permitiendo ejecutar acciones automáticas como activar alarmas, encender luces o generar avisos de seguridad según las condiciones detectadas.
+</p>
+
+<p>
+Este proyecto busca mejorar la seguridad, comodidad y eficiencia del hogar mediante el uso de tecnologías inteligentes, aplicando conocimientos de programación, electrónica y automatización.
+</p>
+
+<h3>Soluciones Existentes</h3>
+
+<ul>
+  <li><strong>Google Home:</strong> Permite controlar dispositivos inteligentes mediante comandos de voz y automatizar tareas del hogar.</li>
+
+  <li><strong>Amazon Alexa:</strong> Integra sensores y dispositivos para controlar luces, puertas, cámaras y electrodomésticos.</li>
+
+  <li><strong>Samsung SmartThings:</strong> Plataforma que conecta diferentes dispositivos inteligentes para automatizar funciones dentro de una vivienda.</li>
+
+  <li><strong>Sistemas de monitoreo ambiental:</strong> Utilizan sensores de gases para detectar contaminación, humo o sustancias nocivas en espacios cerrados.</li>
+</ul>
+
+<h3>ESP32 y Programación</h3>
+
+<p>
+Para el desarrollo de la casa domótica se utilizará el ESP32, un microcontrolador de bajo costo y alto rendimiento diseñado para proyectos de automatización e Internet de las Cosas (IoT).
+</p>
+
+<h4>Características del ESP32</h4>
+
+<ul>
+  <li>Procesador de 32 bits de alto rendimiento.</li>
+  <li>Conectividad Wi-Fi y Bluetooth integrada.</li>
+  <li>Gran cantidad de pines GPIO.</li>
+  <li>Bajo consumo de energía.</li>
+  <li>Compatible con diversos sensores electrónicos.</li>
+  <li>Programable mediante Arduino IDE.</li>
+</ul>
+
+<h4>Funciones Principales</h4>
+
+<p>
+<strong>Setup():</strong> Se ejecuta una sola vez al iniciar el dispositivo y permite configurar sensores, comunicación serial y pines.
+</p>
+
+<p>
+<strong>Loop():</strong> Se ejecuta continuamente para leer sensores y tomar decisiones automáticas.
+</p>
+
+<h3>Sensores Utilizados</h3>
+
+<h4>Sensor MQ-135</h4>
+
+<ul>
+  <li>Detecta amoníaco.</li>
+  <li>Detecta dióxido de carbono.</li>
+  <li>Detecta humo.</li>
+  <li>Monitorea la calidad del aire.</li>
+</ul>
+
+<p>
+Cuando aumenta la concentración de gases, el sensor genera una señal que es interpretada por el ESP32.
+</p>
+
+<h4>Sensor HW-080</h4>
+
+<ul>
+  <li>Detecta incendios.</li>
+  <li>Activa alarmas preventivas.</li>
+  <li>Mejora la seguridad del hogar.</li>
+</ul>
+
+<p>
+Detecta la radiación infrarroja emitida por una llama y envía una señal al microcontrolador.
+</p>
+
+<h4>Sensor HC-SR04</h4>
+
+<ul>
+  <li>Detecta presencia de personas.</li>
+  <li>Mide proximidad de objetos.</li>
+  <li>Automatiza puertas o iluminación.</li>
+</ul>
+
+<p>
+Funciona mediante ondas ultrasónicas que rebotan en los objetos y permiten calcular la distancia.
+</p>
+
+<h3>Diseño y Funcionamiento del Sistema</h3>
+
+<p>
+El proyecto consiste en una casa domótica controlada por un ESP32, encargado de recibir, procesar y gestionar la información de los sensores instalados en la vivienda.
+</p>
+
+<h4>Componentes Principales</h4>
+
+<ul>
+  <li>ESP32 como controlador principal.</li>
+  <li>Sensor MQ-135 para calidad del aire.</li>
+  <li>Sensor HW-080 para detección de fuego.</li>
+  <li>Sensor HC-SR04 para detección de personas y objetos.</li>
+  <li>LEDs y alarmas para notificaciones de riesgo.</li>
+</ul>
+
+<h4>Funcionamiento</h4>
+
+<ol>
+  <li>El MQ-135 supervisa la calidad del aire y genera alertas cuando detecta gases o humo.</li>
+
+  <li>El HW-080 detecta llamas y activa alarmas visuales o sonoras.</li>
+
+  <li>El HC-SR04 detecta personas u objetos para automatizar funciones del hogar.</li>
+
+  <li>El ESP32 procesa toda la información y ejecuta las acciones programadas.</li>
+</ol>
 
     <a href="index.html" class="btn btn-primary">
       Volver al inicio
