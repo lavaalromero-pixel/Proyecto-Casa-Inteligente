@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="./css/design.css">
+
+  <title>Diseño</title>
+</head>
+
+<body>
+   <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+
+    <div class="container">
+
+      <a class="navbar-brand font-weight-bold"
+        href="index.html">
+
+        🏠 Casa Inteligente
+
+      </a>
+
+      <!-- BOTÓN -->
+      <button class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#menu">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <!-- MENÚ -->
+      <div class="collapse navbar-collapse"
+        id="menu">
+
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active"
+              href="index.html">
+
+              Inicio
+
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active"
+              href="about.html">
+
+              Acerca de
+
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active"
+              href="desing.html">
+
+              Diseño
+
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link"
+              href="gallery.html">
+
+              Galería
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+<div class="container mt-5">
+
+  <h1 class="text-center">
+    📐 Fase de Diseño del Prototipo
+  </h1>
+
+  <div class="card p-4 shadow mt-4">
+
+
+  <h4>1. Esquemático con ESP32</h4>
+
+  <p>
+    El sistema está basado en una tarjeta ESP32 que actúa como controlador principal.
+    El sensor MQ-135 se conecta a una entrada analógica para medir la calidad del aire.
+    El sensor ultrasónico HC-SR04 se conecta a dos pines digitales para medir
+    distancias y detectar presencia de personas u objetos. El módulo HW-080 se
+    utiliza para complementar las funciones de monitoreo del sistema. Todos los
+    dispositivos están conectados a la ESP32, que procesa la información y ejecuta
+    acciones automáticas dentro de la vivienda.
+  </p>
+
+  <h4>2. Dibujos y detalles constructivos del prototipo</h4>
+
+  <p>
+    El prototipo representa una vivienda inteligente a escala elaborada en cartón,
+    madera MDF o material reciclable. En el interior se ubican los sensores y el
+    ESP32. El MQ-135 se coloca en una zona de ventilación para detectar gases o
+    contaminación. El HC-SR04 se instala en la entrada principal para detectar la
+    presencia de personas. La estructura contará con espacios para el cableado y la
+    fuente de alimentación.
+  </p>
+
+  <h4>3. Materiales requeridos</h4>
+
+  <ul>
+    <li>ESP32</li>
+    <li>Sensor MQ-135</li>
+    <li>Sensor ultrasónico HC-SR04</li>
+    <li>Módulo HW-080</li>
+    <li>Protoboard</li>
+    <li>Cables Dupont</li>
+    <li>LEDs indicadores</li>
+    <li>Resistencias</li>
+    <li>Fuente de alimentación USB 5V</li>
+    <li>Cartón o MDF para la maqueta</li>
+    <li>Silicona y herramientas de montaje</li>
+  </ul>
+
+  <h4>4. Diseño estructural del sistema técnico</h4>
+
+  <ul>
+    <li><strong>Entrada de datos:</strong> sensores MQ-135, HC-SR04 y HW-080.</li>
+    <li><strong>Procesamiento:</strong> ESP32 recibe y analiza la información de los sensores.</li>
+    <li><strong>Salida:</strong> activación de LEDs, alarmas o notificaciones según las condiciones detectadas.</li>
+  </ul>
+
+  <h4>5. Mecanismos, sensores y actuadores</h4>
+
+  <p><strong>Sensores</strong></p>
+
+  <ul>
+    <li>MQ-135: monitorea la calidad del aire y detecta gases contaminantes.</li>
+    <li>HC-SR04: mide distancias y detecta movimiento o presencia.</li>
+    <li>HW-080: proporciona información adicional para el monitoreo del sistema.</li>
+  </ul>
+
+  <p><strong>Actuadores</strong></p>
+
+  <ul>
+    <li>LEDs de señalización.</li>
+    <li>Posibles alarmas o sistemas de ventilación automatizados.</li>
+  </ul>
+
+  <h4>6. Fuentes de energía</h4>
+
+  <p>
+    El sistema será alimentado mediante una fuente USB de 5V conectada al ESP32.
+    Esta alimentación suministra energía a todos los sensores y componentes
+    electrónicos del prototipo.
+  </p>
+
+  <h4>7. Control y programación</h4>
+
+  <p>
+    El control del sistema se realizará mediante programación en Arduino IDE
+    utilizando el ESP32. El programa leerá continuamente los datos de los sensores
+    y ejecutará acciones automáticas según las condiciones establecidas.
+  </p>
+
+  <p><strong>Funciones principales:</strong></p>
+
+  <ul>
+    <li>Monitoreo de calidad del aire.</li>
+    <li>Detección de presencia y distancia.</li>
+    <li>Activación de alertas visuales.</li>
+    <li>Procesamiento de datos en tiempo real.</li>
+  </ul>
+
+  <h4>8. Diseño electrónico</h4>
+
+  <p>
+    El diseño electrónico está compuesto por el ESP32 como unidad central de
+    control, conectado al MQ-135 mediante una entrada analógica y al HC-SR04
+    mediante pines digitales de Trigger y Echo. Los LEDs se conectan a salidas
+    digitales para indicar el estado del sistema. Todo el circuito se monta sobre
+    una protoboard para facilitar pruebas y modificaciones.
+  </p>
+
+</div>
+
+</body>
+</html>

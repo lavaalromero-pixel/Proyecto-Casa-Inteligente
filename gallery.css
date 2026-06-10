@@ -1,0 +1,13 @@
+body{
+  background-color: #fff8f0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.imagen{
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.imagen:hover{
+  transform: scale(1.05);
+}

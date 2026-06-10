@@ -1,0 +1,13 @@
+body{
+  background-color: #f2fff2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sensor{
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+.sensor:hover{
+  transform: translateY(-10px);
+}
